@@ -1,0 +1,42 @@
+### 
+GET http://localhost:3000/policies
+
+### 
+GET http://localhost:3000/policies/1
+
+### 
+GET http://localhost:3000/policies/9999
+
+### 
+POST http://localhost:3000/policies
+Content-Type: application/json
+
+{
+    "Coverage": "ประกันสุขภาพเหมาจ่าย Ultra",
+    "Premium": 25000.00,
+    "StartDate": "2024-01-01",
+    "EndDate": "2024-12-31"
+}
+
+### 
+POST http://localhost:3000/policies
+Content-Type: application/json
+
+{
+    "Coverage": "สั้น",
+    "Premium": -500,
+    "StartDate": "01/01/2024", 
+    "EndDate": "2024-12-31"
+}
+
+### 
+PUT http://localhost:3000/policies/3
+Content-Type: application/json
+
+{
+    "Coverage": "ประกันสุขภาพเหมาจ่าย Ultra Plus+",
+    "Premium": 300000000000000.00
+}
+
+### 
+DELETE http://localhost:3000/policies/1
